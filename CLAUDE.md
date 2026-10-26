@@ -38,3 +38,13 @@ _TBD — describe top-level directories as they are added._
 - Develop on a feature branch; don't push directly to the default branch.
 - Run tests and lint before pushing.
 - Open a pull request for review rather than merging directly.
+
+## AI video generation (strict rule)
+
+- Never generate a video with an AI tool (Higgsfield or any other generative
+  video service) without the user's explicit permission.
+- Before any AI video generation, ask the user for confirmation **three separate
+  times**, showing the prompt and the credit cost each time. Generate only after
+  all three confirmations are a clear "yes".
+- Code-rendered videos (e.g. Remotion) use no credits, but still tell the user
+  before rendering.
