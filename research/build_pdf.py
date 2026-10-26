@@ -54,11 +54,11 @@ rows = "\n".join(
 <td><b>{esc(fmt)}</b><br>{esc(hook)}</td>
 <td>{esc(audio)}</td>
 <td><span class="m {m.lower()}">{m}</span></td>
-<td><a href="{esc(u)}">Open reel ↗</a></td></tr>"""
+<td class="u"><a href="{esc(u)}">Open reel ↗</a><br><span class="url">{esc(u.replace('https://www.',''))}</span></td></tr>"""
     for i, (p, h, v, x, fo, d, fmt, hook, audio, m, u) in enumerate(REELS, 1))
 
 extras = "\n".join(
-    f"<tr><td>{'Instagram' if p=='IG' else 'TikTok'}</td><td><b>@{esc(h)}</b></td><td>{v} ({x})</td><td>{esc(f)}</td><td><a href='{esc(u)}'>Open reel ↗</a></td></tr>"
+    f"<tr><td>{'Instagram' if p=='IG' else 'TikTok'}</td><td><b>@{esc(h)}</b></td><td>{v} ({x})</td><td>{esc(f)}</td><td><a href='{esc(u)}'>Open reel ↗</a><br><span class='url'>{esc(u.replace('https://www.',''))}</span></td></tr>"
     for p, h, v, x, f, u in EXTRAS)
 
 patterns = "\n".join(f"<div class='pat'><b>{esc(a)}</b><p>{esc(b)}</p></div>" for a, b in PATTERNS)
@@ -88,6 +88,7 @@ a {{ color: #1a56db; text-decoration: none; font-weight: 600; white-space: nowra
 .pats {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; }}
 .pat {{ border: 1px solid #e3e3e3; border-radius: 6px; padding: 3mm; }}
 .pat p {{ margin: 1mm 0 0; color: #444; font-size: 8.5pt; }}
+td.u {{ width: 48mm; }} .url {{ font-size: 6.5pt; color: #555; word-break: break-all; font-family: 'DejaVu Sans Mono', monospace; }}
 .note {{ font-size: 8pt; color: #666; margin-top: 3mm; }}
 </style></head><body>
 <h1>Viral Selfie-Reel Reference Sheet</h1>
