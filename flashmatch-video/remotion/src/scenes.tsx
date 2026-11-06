@@ -384,9 +384,9 @@ export const Safety: React.FC<S> = ({ d }) => {
       <AbsoluteFill style={{ opacity: 1 - clipOut, justifyContent: "center", alignItems: "center" }}>
         <Reveal at={0.2}>
           <Headline size={92} style={{ textAlign: "center" }}>
-            Every man is verified
+            Two human moments.
             <br />
-            <span style={{ fontStyle: "italic", color: C.gold }}>before he meets anyone</span>
+            <span style={{ fontStyle: "italic", color: C.gold }}>Everything else runs itself.</span>
           </Headline>
         </Reveal>
       </AbsoluteFill>
@@ -704,7 +704,7 @@ export const Margins: React.FC<S> = () => {
       </Reveal>
       <Reveal at={0.3}>
         <Headline size={76} style={{ marginTop: 18 }}>
-          <Counter at={10.8} to={84} dur={1} format={(v) => `${Math.round(v)}`} style={{ color: C.gold }} /> cents of every dollar is contribution
+          <Counter at={0.4} to={84} dur={1.2} format={(v) => `${Math.round(v)}`} style={{ color: C.gold }} /> cents of every dollar is contribution
         </Headline>
       </Reveal>
       <div style={{ display: "flex", gap: 70, marginTop: 70 }}>
